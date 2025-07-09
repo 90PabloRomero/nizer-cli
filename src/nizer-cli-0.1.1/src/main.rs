@@ -30,33 +30,7 @@ fn format_metadata(path: &Path) -> String {
     let m = modified.unwrap_or("????-??-?? ??:??:??".into());
     let c = created.unwrap_or("????-??-?? ??:??:??".into());
 
-    // Color codes (blue gradient)
-    let color_name = "\x1b[38;5;153m";
-    let color_vxuv = "\x1b[38;5;75m";
-    let color_mod = "\x1b[38;5;33m";
-    let color_cre = "\x1b[38;5;19m";
-    let reset = "\x1b[0m";
-
-    // Icons
-    let icon_vxuv = "👁️";
-    let icon_mod = "🕒";
-    let icon_cre = "🗓️";
-
-    format!(
-        "{color_name}{}{reset} {icon_vxuv} {color_vxuv}{}{reset} {icon_mod} {color_mod}{}{reset} {icon_cre} {color_cre}{}{reset}",
-        path.file_name().unwrap().to_string_lossy(),
-        vxuv,
-        m,
-        c,
-        color_name=color_name,
-        color_vxuv=color_vxuv,
-        color_mod=color_mod,
-        color_cre=color_cre,
-        icon_vxuv=icon_vxuv,
-        icon_mod=icon_mod,
-        icon_cre=icon_cre,
-        reset=reset
-    )
+    format!("{:?} - VXUV: {} - M: {} - C: {}", path.file_name().unwrap(), vxuv, m, c)
 }
 
 // Load last viewed times from .nizer_vxuv in the directory

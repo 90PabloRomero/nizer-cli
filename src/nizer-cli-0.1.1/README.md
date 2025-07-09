@@ -56,30 +56,6 @@ Contributions are welcome! Please open issues or pull requests.
 1. Fork the repository.
 2. Create a new branch.
 3. Make your changes.
-
-Haz cambios y compila:
-cargo build --release
-
-sh
-
-
-Ejecuta el binario directamente:
-./target/release/nizer
-
-sh
-
-
-Si quieres instalarlo temporalmente en tu sistema para probarlo como comando global:
-sudo cp ./target/release/nizer /usr/local/bin/
-
-sh
-
-
-Luego puedes ejecutar nizer desde cualquier terminal.
-
-
-
-
 4. Submit a pull request.
 
 ## License
