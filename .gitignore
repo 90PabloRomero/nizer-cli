@@ -1,1 +1,13 @@
-/target
+# Rust build artifacts
+/target/
+/pkg/
+
+# Packages
+*.tar.gz
+
+# Binaries
+nizer
+
+# AUR packaging files (se mantienen fuera del repo de código)
+PKGBUILD
+.SRCINFO
